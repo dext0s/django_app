@@ -9,6 +9,7 @@ source "./.virtualenvs/${env_name}/bin/activate"
 python -m pip install -r requirements.txt
 #Create cron
 crontab_line="@reboot ${PWD}/${run_script}"
+(crontab -l 2>/dev/null; echo "crontab_line")| crontab -
 #create run file 
 echo "#!/bin/bash" > "$run_script"
 echo "cd ${PWD}" >> "$run_script"
