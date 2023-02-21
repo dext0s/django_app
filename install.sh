@@ -4,7 +4,7 @@ source ./env.sh
 ## END PARAMETERS ##
 #Already in app_dir and already appuser 
 mkdir .virtualenvs
-python3 -m venv "./.virtualenvs/${env_name}"
+python -m venv "./.virtualenvs/${env_name}"
 source "./.virtualenvs/${env_name}/bin/activate"
 python -m pip install -r requirements.txt
 #Create cron
